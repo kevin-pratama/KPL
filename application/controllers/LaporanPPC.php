@@ -120,8 +120,6 @@ class LaporanPPC extends CI_Controller {
 		$tanggal_pulang				= $data[0]['tanggal_pulang'];
 		$data['tanggal_pulang']		= $this->Tglindo($tanggal_pulang);
 		$data['page']				= "page_laporanPPC_utama";
-		//$hsldinas					= $this->input->post('hsldinas');
-
 		
 		$this->load->view('admin/templates/header', $data);
 		$this->load->view('admin/templates/sidebar', $data);
@@ -238,18 +236,6 @@ class LaporanPPC extends CI_Controller {
 			$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
 			ob_start();
 				// edit ediit elemen update
-						
-				//$nosurat			= $this->input->post('nosurat');
-				//$menimbang			= $this->input->post('menimbang');
-				//$dasar 				= $this->input->post('dasar');
-				//$kelas				= $this->input->post('kelas');
-				//$pegawai			= $this->input->post('pegawai');
-				//$tujuandl			= $this->input->post('tujuandl');
-				//$keperluandl		= $this->input->post('keperluandl');
-				//$tanggalttd			= $this->input->post('tanggalttd');
-				//$pj					= $this->input->post('pj');		
-				//$pjttd				= $this->input->post('pjttd');
-				//$tanggal_berangkat	= $this->input->post('tanggal_berangkat');
 				$tanggal_pulang   	= $this->input->post('tanggal_pulang');
 				$hsldinas			= $this->input->post('hsldinas');
 

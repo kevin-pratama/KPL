@@ -645,8 +645,6 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 	public function checkDuplicateDL($post_email)
 	{
 
-		//$this->db->where('pegawaidl', $email_id);
-
 		$query = $this->db->get('my_registration_table');
 
 		$count_row = $query->num_rows();
