@@ -17,7 +17,7 @@ class Profile extends CI_Controller
 
     public function index()
     {
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
         
         $this->load->view('admin/templates/header');
 		$this->load->view('admin/templates/sidebar');

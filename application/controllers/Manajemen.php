@@ -49,7 +49,7 @@ class Manajemen extends CI_Controller {
 		);
 
 		
-		$this->db->where('NIP', $NIP);
+		//$this->db->where('NIP', $NIP);
 		$this->db->update('tbl_users', $data);
 		  
 		$this->load->view('admin/templates/header', $data);

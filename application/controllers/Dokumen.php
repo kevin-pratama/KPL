@@ -376,7 +376,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
 
 		ob_start();
-		$fileName		        	= "";
+		//$fileName		        	= "";
 		$nosurat			        = $this->input->post('nosurat');
 		$no_ppk						= $this->input->post('no_ppk');
 		$menimbang			        = $this->input->post('menimbang');
@@ -449,7 +449,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 			'keperluandl'		=> $keperluandl,
 			'tanggalttd'		=> $tanggalttd,
 			'pjttd'				=> $pjttd,
-			'pj'                => $pj,
+			//'pj'                => $pj,
 			'attachments'		=> $attachments,
 			'class_id'			=> $kelas,
 			'id_trader'         => $trader[0],
@@ -645,7 +645,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 	public function checkDuplicateDL($post_email)
 	{
 
-		$this->db->where('pegawaidl', $email_id);
+		//$this->db->where('pegawaidl', $email_id);
 
 		$query = $this->db->get('my_registration_table');
 

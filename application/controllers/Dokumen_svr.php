@@ -164,7 +164,7 @@ class Dokumen_svr extends CI_Controller {
 		
 
 		ob_start();
-		$fileName		        	= "";
+		//$fileName		        	= "";
 		$nosurat			        = $this->input->post('nosurat');
 		$menimbang			        = $this->input->post('menimbang');
 		$dasar 			        	= $this->input->post('dasar');
