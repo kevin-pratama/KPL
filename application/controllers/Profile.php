@@ -25,7 +25,7 @@ class Profile extends CI_Controller
 
     public function edit($no)
      {
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
         $post = $this->input->post();
          if (!isset($no)) show_404();
        

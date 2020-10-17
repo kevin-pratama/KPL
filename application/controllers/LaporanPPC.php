@@ -233,10 +233,10 @@ class LaporanPPC extends CI_Controller {
 			} 
 	
 			public function update($id_doc){
-			$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+			//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
 			ob_start();
 				// edit ediit elemen update
-				$tanggal_pulang   	= $this->input->post('tanggal_pulang');
+				
 				$hsldinas			= $this->input->post('hsldinas');
 
 				$this->db->set("hsldinas", $hsldinas);

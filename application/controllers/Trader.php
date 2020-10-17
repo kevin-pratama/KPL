@@ -81,7 +81,7 @@ class Trader extends CI_Controller {
 	}
 	
 	public function delete_trader($id_trader){
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		
 		$this->db->delete('tb_r_trader', array('id_trader' => $id_trader));
 		header('location:'.base_url().'trader');
 	}

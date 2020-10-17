@@ -85,7 +85,7 @@ class Manajemen extends CI_Controller {
 	
 	public function delete_user($userId){
 
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		
 		$this->db->delete('tbl_users', array('userId' => $userId));
 		//$this->load->view('admin/page_user_edit',$data);
 		$this->load->view('admin/templates/footer');

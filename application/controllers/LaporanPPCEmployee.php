@@ -233,7 +233,7 @@ class LaporanPPCEmployee extends CI_Controller {
 			} 
 	
 			public function update($id_doc){
-			$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaile')])->row_array();
+			//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaile')])->row_array();
 			ob_start();
 				// edit ediit elemen update
 						

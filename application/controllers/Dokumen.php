@@ -363,7 +363,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 
 	public function delete_dokumen($id)
 	{
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
 		$this->db->delete('tb_dokumen', array('id_doc' => $id));
 		$this->db->delete('tb_detail_dokumen', array('id_doc' => $id));
 		$this->db->delete('events', array('id' =>  $id));
@@ -641,22 +641,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 		ob_flush();
 	}
 
-	// Cek data kembar
-	public function checkDuplicateDL($post_email)
-	{
 
-		$query = $this->db->get('my_registration_table');
-
-		$count_row = $query->num_rows();
-
-		if ($count_row > 0) {
-			//if count row return any row; that means you have already this email address in the database. so you must set false in this sense.
-			return FALSE; // here I change TRUE to false.
-		} else {
-			// doesn't return any row means database doesn't have this email
-			return TRUE; // And here false to TRUE
-		}
-	}
 
 	public  function Tglindo($tgl)
 	{

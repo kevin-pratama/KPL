@@ -182,8 +182,7 @@ class DokumenManager extends CI_Controller {
 		$tanggal_pulang				= ($data[0]['tanggal_pulang']);
 		$data['tanggal_pulang']		= $this->Tglindo($tanggal_pulang);
 		$data['page']				= "page_dokumen";
-		$kirim = 
-		$mail             = new PHPMailer();
+		//$mail             = new PHPMailer();
 
 $subject = $data[0]['nosurat'];
  foreach ($pegawai as $vpegawai) {
@@ -257,7 +256,7 @@ Bersama ini kami menugaskan saudara : '.$vpegawai->Namapeg.'
 // Also, for getting full html you may use the following internal method:
 //$body = $this->email->full_html($subject, $message);
 
-$result = $this->email
+//$result = $this->email
  
 ->from('agus.widjanarko@kkp.go.id')
  
@@ -290,7 +289,7 @@ ob_flush();
 	}
 	
 	public function delete_dokumen($id){
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emailm')])->row_array();
+		//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emailm')])->row_array();
 		$this->db->delete('tb_dokumen', array('id_doc' => $id));
 		$this->db->delete('tb_detail_dokumen', array('id_doc' => $id));
 		$this->db->delete('events', array('id' =>  $id));
@@ -303,7 +302,7 @@ ob_flush();
 		
 
 		ob_start();
-		$fileName		        	= "";
+		//$fileName		        	= "";
 		$nosurat			        = $this->input->post('nosurat');
 		$menimbang			        = $this->input->post('menimbang');
 		$dasar 			        	= $this->input->post('dasar');
@@ -364,7 +363,7 @@ ob_flush();
 			'keperluandl'		=> $keperluandl,
 			'tanggalttd'		=> $tanggalttd,
 			'pjttd'				=> $pjttd,
-			'pj'                => $pj,
+			
 			'class_id'			=> $kelas,
 			'id_trader'         => $trader[0],
           	'created_date' 		=> date('Y-m-d H:i:00'),
@@ -559,23 +558,8 @@ ob_flush();
 		ob_flush();		
 	}
 
-			    // Cek data kembar
-	public function checkDuplicateDL($post_email) {
-
-    $this->db->where('pegawaidl', $email_id);
-
-    $query = $this->db->get('my_registration_table');
-
-    $count_row = $query->num_rows();
-
-    if ($count_row > 0) {
-      //if count row return any row; that means you have already this email address in the database. so you must set false in this sense.
-        return FALSE; // here I change TRUE to false.
-     } else {
-      // doesn't return any row means database doesn't have this email
-        return TRUE; // And here false to TRUE
-     }
-}
+			
+	
 
 	public  function Tglindo($tgl){
 			$tanggal = substr($tgl,8,2);

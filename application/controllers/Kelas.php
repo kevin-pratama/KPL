@@ -32,7 +32,7 @@ class Kelas extends CI_Controller {
 	
 	public function update(){
 		ob_start();
-		$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
+		//$data['user'] = $this->db->get_where('tbl_users', ['email' => $this->session->userdata('emaila')])->row_array();
 		
 		$id_doc = $this->input->post('idkelas');
 		$namekelas = $this->input->post('namekelas');
