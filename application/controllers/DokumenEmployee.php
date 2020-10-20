@@ -393,7 +393,7 @@ Bersama ini kami menugaskan saudara : ' . $vpegawai->Namapeg . '
 		//$tanggal = substr($tgl, 8, 2);
 		$bulan = $this->getBulan(substr($tgl, 5, 2));
 		$tahun = substr($tgl, 0, 4);
-		return $tanggal . ' ' . $bulan . ' ' . $tahun;
+		return $tgl . ' ' . $bulan . ' ' . $tahun;
 	}
 
 	public function getBulan($bln)
